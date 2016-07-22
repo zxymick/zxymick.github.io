@@ -1,9 +1,9 @@
-name: White Paper
+name: zxymick home
 highlighter: true
-url: http://vinitkumar.me/white-paper
+url: http://zxymick.com
 gems: [jekyll-paginate,  jekyll-gist]
 paginate: 8
-description:     Jekyll theme for Programmers
+description:     zxymick's blog
 intro: White Paper is a Jekyll theme most suited to be used on tech blogs that like their content to shine.
 logo:             logo.png
 disqus_shortname:
@@ -13,9 +13,9 @@ disqus_shortname:
 
 # Owner/author information
 owner:
-  name:           <your-name-here>
-  avatar:         <avatar-image-link>
-  email:          <your-email-address>
+  name:           <zxymick>
+  avatar:         <avatar-image-lnk>
+  email:          <zxymick@126.com>
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   github:
