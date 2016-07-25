@@ -113,6 +113,13 @@ a:visited { color: #205caa; }
   width: -o-calc(41.875%);
   width: calc(41.875%);
 }
+.footer-col-4 {
+  width: 600px; /*fallback*/
+  width: -webkit-calc(41.875%);
+  width: -moz-calc(41.875%);
+  width: -o-calc(41.875%);
+  width: calc(41.875%);
+}
 
 .site-footer ul { list-style: none; }
 
