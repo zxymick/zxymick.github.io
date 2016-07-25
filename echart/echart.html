@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:800px"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/source/echarts-all.js"></script>
+    <script src="data.js"></script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+				timeline:{
+					data:[
+						'4月8','4月9','4月10','4月11','4月12','4月13','4月14','4月15','4月16','4月17','4月18','4月19','4月20','4月21','4月22','4月23','4月24','4月25','4月26','4月27','4月28','4月29','4月30','5月1','5月2','5月3','5月4','5月5','5月6','5月7','5月8','5月9','5月10','5月11','5月12','5月13','5月14','5月15','5月16','5月17','5月18','5月19','5月20','5月21','5月22','5月23','5月24','5月25','5月26','5月27','5月28','5月29','5月30','5月31','6月1','6月2','6月3','6月4','6月5','6月6','6月7','6月8','6月9','6月10','6月11','6月12','6月13','6月14','6月15','6月16','6月17','6月18'
+					],
+					label: {
+					    show: false,//默认隐藏
+					    rotate : 72,
+					    interval : 1,//标签显示间隔
+					    formatter: function (s) {
+					        return s.slice(0,9)//slice（首位，末尾-1）
+					    }
+					},
+					autoPlay : true,
+					playInterval : 1000//播放时间
+				},
+				options:[
+					{
+						title : {
+							'text':'2016年暑期报班动态数据',
+							'subtext':'数据来自ZXY'
+						},
+						tooltip : {
+							trigger: 'axis',
+							showDelay : 0,
+							axisPointer:{
+								show: true,
+								type : 'cross',
+								lineStyle: {
+									type : 'dashed',
+									width : 1
+								}
+							}
+						},
+						toolbox : {
+							'show':true,
+							orient : 'vertical',
+							x: 'right',
+							y: 'center',
+							'feature':{
+								'mark':{'show':true},
+								'dataView':{'show':true,'readOnly':false},
+								'restore':{'show':true},
+								'saveAsImage':{'show':true}
+							}
+						},
+						grid : {'y':80,'y2':100},
+						xAxis : [{
+							'type':'value',
+							'name':'校区累计门次数',
+							'max':3000
+						}],
+						yAxis : [{
+							'type':'value',
+							'name':'每日新增数据',
+							'max':600
+						}],
+						series : [
+							{
+								'name':'门次',
+								'type':'scatter',
+								markLine : {
+									data : [
+											{type : 'max', name: 'y平均值', 
+												itemStyle:{
+															normal:{
+																	borderColor:'red',
+																	borderWidth: 2,
+																	}
+															}
+											},
+											{type : 'max', name: 'x平均值', valueIndex : 0, itemStyle:{normal:{borderColor:'black',borderWidth: 2}}}
+											]
+								},
+								symbolSize : 15,
+								itemStyle: {
+									normal : {
+										label : {
+											show: true,
+											textStyle :{fontSize:20,color:'red'},
+											formatter : '{b}'
+										}
+									}
+								},
+								'data': dataMap.dataGDP_Estate['42468']
+							}
+						]
+					},
+					{ title: { 'text': '2016年4月8日' }, series: [{ 'data': dataMap.dataGDP_Estate['42468'] }] },
+                    { title: { 'text': '2016年4月9日' }, series: [{ 'data': dataMap.dataGDP_Estate['42469'] }] },
+                    { title: { 'text': '2016年4月10日' }, series: [{ 'data': dataMap.dataGDP_Estate['42470'] }] },
+                    { title: { 'text': '2016年4月11日' }, series: [{ 'data': dataMap.dataGDP_Estate['42471'] }] },
+                    { title: { 'text': '2016年4月12日' }, series: [{ 'data': dataMap.dataGDP_Estate['42472'] }] },
+                    { title: { 'text': '2016年4月13日' }, series: [{ 'data': dataMap.dataGDP_Estate['42473'] }] },
+                    { title: { 'text': '2016年4月14日' }, series: [{ 'data': dataMap.dataGDP_Estate['42474'] }] },
+                    { title: { 'text': '2016年4月15日' }, series: [{ 'data': dataMap.dataGDP_Estate['42475'] }] },
+                    { title: { 'text': '2016年4月16日' }, series: [{ 'data': dataMap.dataGDP_Estate['42476'] }] },
+                    { title: { 'text': '2016年4月17日' }, series: [{ 'data': dataMap.dataGDP_Estate['42477'] }] },
+                    { title: { 'text': '2016年4月18日' }, series: [{ 'data': dataMap.dataGDP_Estate['42478'] }] },
+                    { title: { 'text': '2016年4月19日' }, series: [{ 'data': dataMap.dataGDP_Estate['42479'] }] },
+                    { title: { 'text': '2016年4月20日' }, series: [{ 'data': dataMap.dataGDP_Estate['42480'] }] },
+                    { title: { 'text': '2016年4月21日' }, series: [{ 'data': dataMap.dataGDP_Estate['42481'] }] },
+                    { title: { 'text': '2016年4月22日' }, series: [{ 'data': dataMap.dataGDP_Estate['42482'] }] },
+                    { title: { 'text': '2016年4月23日' }, series: [{ 'data': dataMap.dataGDP_Estate['42483'] }] },
+                    { title: { 'text': '2016年4月24日' }, series: [{ 'data': dataMap.dataGDP_Estate['42484'] }] },
+                    { title: { 'text': '2016年4月25日' }, series: [{ 'data': dataMap.dataGDP_Estate['42485'] }] },
+                    { title: { 'text': '2016年4月26日' }, series: [{ 'data': dataMap.dataGDP_Estate['42486'] }] },
+                    { title: { 'text': '2016年4月27日' }, series: [{ 'data': dataMap.dataGDP_Estate['42487'] }] },
+                    { title: { 'text': '2016年4月28日' }, series: [{ 'data': dataMap.dataGDP_Estate['42488'] }] },
+                    { title: { 'text': '2016年4月29日' }, series: [{ 'data': dataMap.dataGDP_Estate['42489'] }] },
+                    { title: { 'text': '2016年4月30日' }, series: [{ 'data': dataMap.dataGDP_Estate['42490'] }] },
+                    { title: { 'text': '2016年5月1日' }, series: [{ 'data': dataMap.dataGDP_Estate['42491'] }] },
+                    { title: { 'text': '2016年5月2日' }, series: [{ 'data': dataMap.dataGDP_Estate['42492'] }] },
+                    { title: { 'text': '2016年5月3日' }, series: [{ 'data': dataMap.dataGDP_Estate['42493'] }] },
+                    { title: { 'text': '2016年5月4日' }, series: [{ 'data': dataMap.dataGDP_Estate['42494'] }] },
+                    { title: { 'text': '2016年5月5日' }, series: [{ 'data': dataMap.dataGDP_Estate['42495'] }] },
+                    { title: { 'text': '2016年5月6日' }, series: [{ 'data': dataMap.dataGDP_Estate['42496'] }] },
+                    { title: { 'text': '2016年5月7日' }, series: [{ 'data': dataMap.dataGDP_Estate['42497'] }] },
+                    { title: { 'text': '2016年5月8日' }, series: [{ 'data': dataMap.dataGDP_Estate['42498'] }] },
+                    { title: { 'text': '2016年5月9日' }, series: [{ 'data': dataMap.dataGDP_Estate['42499'] }] },
+                    { title: { 'text': '2016年5月10日' }, series: [{ 'data': dataMap.dataGDP_Estate['42500'] }] },
+                    { title: { 'text': '2016年5月11日' }, series: [{ 'data': dataMap.dataGDP_Estate['42501'] }] },
+                    { title: { 'text': '2016年5月12日' }, series: [{ 'data': dataMap.dataGDP_Estate['42502'] }] },
+                    { title: { 'text': '2016年5月13日' }, series: [{ 'data': dataMap.dataGDP_Estate['42503'] }] },
+                    { title: { 'text': '2016年5月14日' }, series: [{ 'data': dataMap.dataGDP_Estate['42504'] }] },
+                    { title: { 'text': '2016年5月15日' }, series: [{ 'data': dataMap.dataGDP_Estate['42505'] }] },
+                    { title: { 'text': '2016年5月16日' }, series: [{ 'data': dataMap.dataGDP_Estate['42506'] }] },
+                    { title: { 'text': '2016年5月17日' }, series: [{ 'data': dataMap.dataGDP_Estate['42507'] }] },
+                    { title: { 'text': '2016年5月18日' }, series: [{ 'data': dataMap.dataGDP_Estate['42508'] }] },
+                    { title: { 'text': '2016年5月19日' }, series: [{ 'data': dataMap.dataGDP_Estate['42509'] }] },
+                    { title: { 'text': '2016年5月20日' }, series: [{ 'data': dataMap.dataGDP_Estate['42510'] }] },
+                    { title: { 'text': '2016年5月21日' }, series: [{ 'data': dataMap.dataGDP_Estate['42511'] }] },
+                    { title: { 'text': '2016年5月22日' }, series: [{ 'data': dataMap.dataGDP_Estate['42512'] }] },
+                    { title: { 'text': '2016年5月23日' }, series: [{ 'data': dataMap.dataGDP_Estate['42513'] }] },
+                    { title: { 'text': '2016年5月24日' }, series: [{ 'data': dataMap.dataGDP_Estate['42514'] }] },
+                    { title: { 'text': '2016年5月25日' }, series: [{ 'data': dataMap.dataGDP_Estate['42515'] }] },
+                    { title: { 'text': '2016年5月26日' }, series: [{ 'data': dataMap.dataGDP_Estate['42516'] }] },
+                    { title: { 'text': '2016年5月27日' }, series: [{ 'data': dataMap.dataGDP_Estate['42517'] }] },
+                    { title: { 'text': '2016年5月28日' }, series: [{ 'data': dataMap.dataGDP_Estate['42518'] }] },
+                    { title: { 'text': '2016年5月29日' }, series: [{ 'data': dataMap.dataGDP_Estate['42519'] }] },
+                    { title: { 'text': '2016年5月30日' }, series: [{ 'data': dataMap.dataGDP_Estate['42520'] }] },
+                    { title: { 'text': '2016年5月31日' }, series: [{ 'data': dataMap.dataGDP_Estate['42521'] }] },
+                    { title: { 'text': '2016年6月1日' }, series: [{ 'data': dataMap.dataGDP_Estate['42522'] }] },
+                    { title: { 'text': '2016年6月2日' }, series: [{ 'data': dataMap.dataGDP_Estate['42523'] }] },
+                    { title: { 'text': '2016年6月3日' }, series: [{ 'data': dataMap.dataGDP_Estate['42524'] }] },
+                    { title: { 'text': '2016年6月4日' }, series: [{ 'data': dataMap.dataGDP_Estate['42525'] }] },
+                    { title: { 'text': '2016年6月5日' }, series: [{ 'data': dataMap.dataGDP_Estate['42526'] }] },
+                    { title: { 'text': '2016年6月6日' }, series: [{ 'data': dataMap.dataGDP_Estate['42527'] }] },
+                    { title: { 'text': '2016年6月7日' }, series: [{ 'data': dataMap.dataGDP_Estate['42528'] }] },
+                    { title: { 'text': '2016年6月8日' }, series: [{ 'data': dataMap.dataGDP_Estate['42529'] }] },
+                    { title: { 'text': '2016年6月9日' }, series: [{ 'data': dataMap.dataGDP_Estate['42530'] }] },
+                    { title: { 'text': '2016年6月10日' }, series: [{ 'data': dataMap.dataGDP_Estate['42531'] }] },
+                    { title: { 'text': '2016年6月11日' }, series: [{ 'data': dataMap.dataGDP_Estate['42532'] }] },
+                    { title: { 'text': '2016年6月12日' }, series: [{ 'data': dataMap.dataGDP_Estate['42533'] }] },
+                    { title: { 'text': '2016年6月13日' }, series: [{ 'data': dataMap.dataGDP_Estate['42534'] }] },
+                    { title: { 'text': '2016年6月14日' }, series: [{ 'data': dataMap.dataGDP_Estate['42535'] }] },
+                    { title: { 'text': '2016年6月15日' }, series: [{ 'data': dataMap.dataGDP_Estate['42536'] }] },
+                    { title: { 'text': '2016年6月16日' }, series: [{ 'data': dataMap.dataGDP_Estate['42537'] }] },
+                    { title: { 'text': '2016年6月17日' }, series: [{ 'data': dataMap.dataGDP_Estate['42538'] }] },
+                    { title: { 'text': '2016年6月18日' }, series: [{ 'data': dataMap.dataGDP_Estate['42539'] }] }
+				]
+			};
+
+        // 为echarts对象加载数据
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
