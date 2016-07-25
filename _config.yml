@@ -1,33 +1,6 @@
-name: zxymick home
-highlighter: true
-url: http://zxymick.com
-gems: [jekyll-paginate,  jekyll-gist]
-paginate: 8
-description:     zxymick's blog
-intro: White Paper is a Jekyll theme most suited to be used on tech blogs that like their content to shine.
-logo:             logo.png
-disqus_shortname:
-# url: http://gotchacode.com
-#Comment out url when working locally to resolve base urls correctly
-#url:
-
-# Owner/author information
-owner:
-  name:           <zxymick>
-  avatar:         <avatar-image-lnk>
-  email:          <zxymick@126.com>
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  github:
-  stackexchange:
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:
-
-# Analytics and webmaster tools stuff goes here
-google_analytics:
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-# Links to include in top navigation
-# For external links add external: true
+name: zxymick
+markdown: redcarpet
+pygments: true
+description: "HEHE"
+url: "zxymick.com"
+permalink: /posts/:title
