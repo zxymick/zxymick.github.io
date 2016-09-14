@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 1200px;height:400px;"></div>
+    <div id="main" style="width: 800px;height:400px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));//获取值。。很奇怪，script中就可以使用//来作为注释
@@ -17,8 +17,8 @@
         // 指定图表的配置项和数据
         var option = {
     title: {
-        text: '漏斗图',
-        subtext: '纯属虚构'
+        text: '数据统计-节点数据-转化数据-漏斗',
+        subtext: '虚构-zxymick'
     },
     tooltip: {
         trigger: 'item',
@@ -32,7 +32,7 @@
         }
     },
     legend: {
-        data: ['展现','点击','访问','咨询','订单']
+        data: ['新建学员','申请试听','成功试听','报班缴费']
     },
     calculable: true,
     series: [
@@ -78,11 +78,10 @@
                 }
             },
             data: [
-                {value: 60, name: '访问'},
-                {value: 40, name: '咨询'},
-                {value: 20, name: '订单'},
-                {value: 80, name: '点击'},
-                {value: 100, name: '展现'}
+                {value: 150, name: '新建学员'},
+                {value: 50, name: '申请试听'},
+                {value: 45, name: '成功试听'},
+                {value: 36, name: '报班缴费'}
             ]
         }
     ]
